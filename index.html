@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Animation
+        </title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script>
+            window.onload = function () {
+            setTimeout('delayer()', 4000);
+            }
+            function delayer() {
+            window.location = './pages/home.html';
+            }
+
+        </script>
+        <style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+
+}
+
+section{
+    height: 100%;
+    background: #000;
+}
+
+
+video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#vid{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+h1{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 4em;
+    font-family: Cursive;
+    letter-spacing: 0.2px;
+    font-family: font2;
+}
+
+h1 span
+{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear  forwards;
+}
+
+@keyframes animate
+{
+
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+
+
+
+}
+
+
+h1 span:nth-child(1)
+{
+  animation-delay: 1s; 
+}
+h1 span:nth-child(2)
+{
+  animation-delay: 1.5s; 
+}
+h1 span:nth-child(3)
+{
+  animation-delay: 1.7s; 
+}
+h1 span:nth-child(4)
+{
+  animation-delay: 2s; 
+}
+h1 span:nth-child(5)
+{
+  animation-delay: 2.5s; 
+}
+h1 span:nth-child(6)
+{
+  animation-delay: 2.7s; 
+}
+h1 span:nth-child(7)
+{
+  animation-delay: 3s; 
+}
+h1 span:nth-child(8)
+{
+  animation-delay: 3.5s; 
+}
+h1 span:nth-child(9)
+{
+  animation-delay: 4s; 
+}
+
+
+#col1{
+  width: 100%;
+  height: 100%;
+}
+
+.row{
+  width: 100%;
+  height: 100%;
+}
+
+
+@font-face{
+  src: url(./Bungasai.ttf);
+  font-family: font1;
+}
+
+@font-face{
+  src: url(./LuckiestGuy.ttf);
+  font-family: font2;
+}
+         
+        </style>
+
+</head>
+
+
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12" id="col1">
+
+
+      <section>
+
+        <video src="./video/smoke.mp4" autoplay muted id="vid"></video>
+
+        <h1>
+            <span>Q</span>
+            <span>U</span>
+            <span>B</span>
+            <span>O</span>
+            <span>O</span>
+            <span>L</span>
+
+            
+        </h1>
+
+      </section>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+       
+
+</body>
+</html>

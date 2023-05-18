@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>J QUERY</title>
+    
+    <script>
+        function getlocation()
+        {
+            var str=window.navigator.geolocation;
+            if(str){
+                navigator.geolocation.getCurrentPosition(showposition);
+                alert("Browser support geo location")
+            }
+            else{
+                alert("browser doesn't support geolocation");
+                
+            }
+
+        }
+
+        function showposition(position)
+        {
+            alert("longitude:    "+position.coords.longitude);
+            alert("latitude   "+position.coords.latitude);
+        }
+
+
+    </script>
+
+    </head>
+<body>
+
+<input type="button" name="btnloc" value="fetch location" onclick="getlocation()">
+
+
+</body>
+</html>
